@@ -20,12 +20,13 @@ server.route({
 // Start the server
 async function start() {
     try {
-        return await server.start()
+        let started = await server.start()
+        console.log('Server running at:', server.info.uri)
+        return started
     } catch (err) {
         console.log(err)
         process.exit(1)
     }
-    console.log('Server running at:', server.info.uri)
 }
 
 start()
