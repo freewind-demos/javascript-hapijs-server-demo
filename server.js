@@ -20,7 +20,7 @@ server.route({
 // Start the server
 async function start() {
     try {
-        await server.start()
+        return await server.start()
     } catch (err) {
         console.log(err)
         process.exit(1)
